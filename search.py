@@ -261,7 +261,7 @@ def enforcedHillClimbing(problem, heuristic=nullHeuristic):
     The heuristic function is "manhattanHeuristic" from searchAgent.py.
     It will be pass to this function as second argument (heuristic).
     """
-    "*** YOUR CODE HERE FOR TASK 1 ***"
+    "*** YOUR CODE HERE ***"
 
     # Function of procedure improve: BFS for state with smaller h
     def improve(node):
@@ -318,7 +318,7 @@ def bidirectionalAStarEnhanced(problem, heuristic=nullHeuristic, backwardsHeuris
     It will be pass to this function as second and third arguments.
     You can call it by using: heuristic(state,problem) or backwardsHeuristic(state,problem)
     """
-    "*** YOUR CODE HERE FOR TASK 2 ***"
+    "*** YOUR CODE HERE ***"
     # The problem passed in going to be BidirectionalPositionSearchProblem
 
     # Pseudocode line 1-2

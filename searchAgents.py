@@ -774,7 +774,7 @@ class BidirectionalFoodSearchProblem:
         self.walls = startingGameState.getWalls()
         self.emptyFoodGrid = Grid(self.foodGrid.width, self.foodGrid.height)
 
-        """YOUR CODE HERE FOR TASK 3:"""
+        """YOUR CODE HERE:"""
         # Create a list of food coordinates, because Grid is not traversable
         self.food_list = self.foodGrid.asList()
         # Start state: pacman is in start position and all foods are in their position
@@ -787,14 +787,14 @@ class BidirectionalFoodSearchProblem:
         self.is_goal_state = False
 
     def getStartState(self):
-        """YOUR CODE HERE FOR TASK 3:"""
+        """YOUR CODE HERE:"""
         # Regenerate start state: pacman is in start position and all foods are in their position
         self.start_state = (self.init_pos, self.food_list)
         # Return start state directly
         return self.start_state
     
     def getGoalStates(self):
-        """YOUR CODE HERE FOR TASK 3:"""
+        """YOUR CODE HERE:"""
         # Regenerate the goal states: foods lists are empty, and pacman stays at the position of last-eaten food
         self.goal_state_list = []
         for food in self.food_list:
@@ -803,7 +803,7 @@ class BidirectionalFoodSearchProblem:
         return self.goal_state_list
 
     def isGoalState(self, state):
-        """YOUR CODE HERE FOR TASK 3:"""
+        """YOUR CODE HERE:"""
         # Goal state achieved if food list, i.e., second element of state, is empty
         self.is_goal_state = state[1].count() == 0
         return self.is_goal_state
@@ -814,7 +814,7 @@ class BidirectionalFoodSearchProblem:
         successors = []
         self._expanded += 1
 
-        """YOUR CODE HERE FOR TASK 3:"""
+        """YOUR CODE HERE:"""
         # Consider whether there are successors in four basic directions
         for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
             # Get the coordinate of potential successor
@@ -858,7 +858,7 @@ class BidirectionalFoodSearchProblem:
         successors = []
         self._expanded += 1  # DO NOT CHANGE
 
-        """YOUR CODE HERE FOR TASK 3:"""
+        """YOUR CODE HERE:"""
         # Consider whether there are successors in four basic directions
         for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
             # Get the coordinate of potential successor
@@ -902,18 +902,18 @@ class BidirectionalFoodSearchProblem:
     def getCostOfActions(self, actions):
         # Returns the cost of a particular sequence of actions. If those actions include an illegal move, return 999999
         # This function will return the cost only for display purpose when you run your own test.
-        "*** YOUR CODE HERE FOR TASK 3 (optional) ***"
+        "*** YOUR CODE HERE ***"
         cost = 0
         return cost
 
 
 def bidirectionalFoodProblemHeuristic(state, problem):
-    "*** YOUR CODE HERE FOR TASK 3 ***"
+    "*** YOUR CODE HERE ***"
     # Just use blind heuristic, which is of-course admissible and complete
     return 0
 
 
 def bidirectionalFoodProblemBackwardsHeuristic(state, problem):
-    "*** YOUR CODE HERE FOR TASK 3 ***"
+    "*** YOUR CODE HERE ***"
     # Just use blind heuristic, which is of-course admissible and complete
     return 0
